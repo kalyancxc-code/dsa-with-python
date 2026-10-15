@@ -1,0 +1,5 @@
+flowchart TD
+  S[start with first item as sorted part] --> N[take next item = key]
+  N --> C{item on the left bigger than key?}
+  C -->|yes| SH[shift that item right] --> C
+  C -->|no| P[place key here] --> N

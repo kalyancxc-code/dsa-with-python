@@ -1,0 +1,12 @@
+flowchart TD
+  A[count in-degree of every node] --> B[queue all nodes with in-degree 0]
+  B --> C{queue empty?}
+  C -->|no| D[pop node, add to order]
+  D --> E[for each neighbour: in-degree -= 1]
+  E --> F{in-degree is 0?}
+  F -->|yes| G[push to queue]
+  F -->|no| C
+  G --> C
+  C -->|yes| H{order has all nodes?}
+  H -->|yes| I[valid order]
+  H -->|no| J[cycle: impossible]

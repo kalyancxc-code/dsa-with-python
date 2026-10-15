@@ -1,0 +1,5 @@
+flowchart TD
+  T[try block] -->|no error| E[else block]
+  T -->|error| X[except block]
+  E --> F[finally block]
+  X --> F

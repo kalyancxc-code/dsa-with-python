@@ -1,0 +1,4 @@
+flowchart LR
+  I[next item x] --> Q{target - x in map?}
+  Q -->|yes| A[answer found]
+  Q -->|no| S[store x in map] --> I

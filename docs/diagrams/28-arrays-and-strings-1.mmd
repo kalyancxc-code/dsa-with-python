@@ -1,0 +1,8 @@
+flowchart LR
+  subgraph Before
+    A0[10] --- A1[20] --- A2[30] --- A3[40]
+  end
+  subgraph After_insert_at_1
+    B0[10] --- B1[99] --- B2[20] --- B3[30] --- B4[40]
+  end
+  Before -->|"shift 3 items right: O(n)"| After_insert_at_1

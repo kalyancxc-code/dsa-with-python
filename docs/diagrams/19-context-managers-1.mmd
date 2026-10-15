@@ -1,0 +1,7 @@
+sequenceDiagram
+  participant W as with block
+  participant M as manager
+  W->>M: __enter__ (setup)
+  M-->>W: resource
+  W->>W: run body
+  W->>M: __exit__ (cleanup, even on error)

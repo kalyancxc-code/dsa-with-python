@@ -1,0 +1,6 @@
+flowchart TD
+  S[slow = fast = head] --> C{fast and fast.next exist?}
+  C -->|no| N[no cycle]
+  C -->|yes| M[slow 1 step, fast 2 steps] --> E{slow is fast?}
+  E -->|yes| Y[cycle found]
+  E -->|no| C

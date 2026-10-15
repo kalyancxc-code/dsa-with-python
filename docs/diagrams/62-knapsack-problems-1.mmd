@@ -1,0 +1,7 @@
+flowchart TD
+  I[for each item] --> W[for w from capacity down to weight]
+  W --> D{better to take the item?}
+  D -->|yes| T["dp[w] = dp[w - wt] + val"]
+  D -->|no| K[keep dp w]
+  T --> W
+  K --> W

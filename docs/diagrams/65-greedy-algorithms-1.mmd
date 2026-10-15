@@ -1,0 +1,6 @@
+flowchart TD
+  P[problem] --> S[sort or order by a rule]
+  S --> L[loop: take the best feasible choice]
+  L --> C{choice safe?}
+  C -->|always| OK[greedy is correct]
+  C -->|counter-example exists| DP[use dynamic programming]

@@ -1,0 +1,4 @@
+flowchart TD
+  A[next number x] --> B{stack not empty and x greater than top?}
+  B -->|yes| C[pop top, its answer is x] --> B
+  B -->|no| D[push x] --> A

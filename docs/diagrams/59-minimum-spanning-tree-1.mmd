@@ -1,0 +1,8 @@
+flowchart TD
+  A[sort all edges by weight] --> B[next cheapest edge u-v]
+  B --> C{find u equals find v?}
+  C -->|yes: cycle| B
+  C -->|no| D[union u,v and add edge to MST]
+  D --> E{MST has V-1 edges?}
+  E -->|no| B
+  E -->|yes| F[done]

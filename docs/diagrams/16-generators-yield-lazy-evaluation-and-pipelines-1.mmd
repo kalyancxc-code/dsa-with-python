@@ -1,0 +1,9 @@
+sequenceDiagram
+  participant C as Caller
+  participant G as Generator
+  C->>G: next()
+  G-->>C: yield 1 (pauses)
+  C->>G: next()
+  G-->>C: yield 2 (pauses)
+  C->>G: next()
+  G-->>C: StopIteration

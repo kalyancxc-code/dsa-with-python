@@ -1,0 +1,4 @@
+flowchart LR
+  A[append] -->|room left| B[O 1 write]
+  A -->|array full| C[allocate bigger array, copy n items] --> B
+  C -.rare, doubling.-> D[Average per append stays O 1]

@@ -1,0 +1,6 @@
+flowchart TD
+  S[Start: marks] --> Q1{marks >= 90?}
+  Q1 -->|Yes| A[Grade A]
+  Q1 -->|No| Q2{marks >= 75?}
+  Q2 -->|Yes| B[Grade B]
+  Q2 -->|No| C[Grade C]

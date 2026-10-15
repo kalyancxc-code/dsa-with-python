@@ -1,0 +1,4 @@
+flowchart LR
+  I[import math] --> C{already loaded?}
+  C -->|yes| R[reuse it]
+  C -->|no| S[search sys.path] --> L[load and run file once] --> R

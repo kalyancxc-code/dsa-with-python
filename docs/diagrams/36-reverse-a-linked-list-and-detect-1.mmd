@@ -1,0 +1,8 @@
+flowchart LR
+  subgraph before
+    A1[1] --> A2[2] --> A3[3] --> AN[None]
+  end
+  subgraph after
+    B3[3] --> B2[2] --> B1[1] --> BN[None]
+  end
+  before --> after

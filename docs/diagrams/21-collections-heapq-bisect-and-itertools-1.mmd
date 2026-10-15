@@ -1,0 +1,11 @@
+flowchart TD
+  T[Need a tool?] --> A{Count things?}
+  A -->|yes| C[Counter]
+  T --> B{Fast both-ends queue?}
+  B -->|yes| D[deque]
+  T --> E{Smallest first / top k?}
+  E -->|yes| H[heapq]
+  T --> F{Search a sorted list?}
+  F -->|yes| BI[bisect]
+  T --> G{Combos / perms?}
+  G -->|yes| I[itertools]

@@ -1,0 +1,5 @@
+flowchart TD
+  A["make_multiplier(3)"] --> B["inner function"]
+  A --> C["remembered: factor = 3"]
+  B --> D["triple(5) -> 15"]
+  C --> D

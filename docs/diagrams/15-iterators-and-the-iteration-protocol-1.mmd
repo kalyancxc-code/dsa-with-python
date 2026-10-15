@@ -1,0 +1,5 @@
+flowchart TD
+  A["for x in obj"] --> B["it = iter(obj)"]
+  B --> C["next(it)"]
+  C -->|value| D[run body] --> C
+  C -->|StopIteration| E[loop ends]

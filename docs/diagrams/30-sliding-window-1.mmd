@@ -1,0 +1,5 @@
+flowchart TD
+  A[right moves forward, add item] --> B{window valid?}
+  B -->|yes| C[update best answer]
+  B -->|no| D[left moves forward, remove item] --> B
+  C --> A

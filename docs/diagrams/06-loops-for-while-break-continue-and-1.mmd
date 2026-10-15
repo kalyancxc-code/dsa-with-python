@@ -1,0 +1,5 @@
+flowchart TD
+  A[Start] --> B{More items?}
+  B -->|Yes| C[Run the body]
+  C --> B
+  B -->|No| D[Exit loop]

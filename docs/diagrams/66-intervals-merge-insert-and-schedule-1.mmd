@@ -1,0 +1,7 @@
+flowchart TD
+  S[sort by start] --> N[next interval]
+  N --> O{start <= last end?}
+  O -->|yes| M[merge: last end = max of ends]
+  O -->|no| A[append as new interval]
+  M --> N
+  A --> N

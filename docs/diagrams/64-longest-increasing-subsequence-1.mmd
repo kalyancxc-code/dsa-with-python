@@ -1,0 +1,5 @@
+flowchart TD
+  X[next number x] --> B["pos = bisect_left(tails, x)"]
+  B --> Q{pos == len tails?}
+  Q -->|yes| A[append x: LIS grows]
+  Q -->|no| R[tails pos = x: smaller tail]

@@ -1,0 +1,7 @@
+flowchart LR
+  A[Write correct code] --> B[Measure with timeit]
+  B --> C{Fast enough?}
+  C -->|Yes| D[Stop]
+  C -->|No| E[Profile to find hotspot]
+  E --> F[Improve algorithm or structure]
+  F --> B

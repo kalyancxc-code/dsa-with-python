@@ -1,0 +1,7 @@
+flowchart TD
+  S[left = 0, right = n-1] --> C{left < right?}
+  C -->|no| N[not found]
+  C -->|yes| T{nums left + nums right}
+  T -->|equal target| F[found]
+  T -->|too small| L[left += 1] --> C
+  T -->|too big| R[right -= 1] --> C

@@ -1,0 +1,4 @@
+flowchart TD
+  S[visit node, mark visited] --> N{unvisited neighbour?}
+  N -->|yes| R[DFS on that neighbour] --> N
+  N -->|no| B[return, backtrack]

@@ -1,0 +1,6 @@
+flowchart TD
+  A["[7, 2, 9, 4, 6]  pivot = 6"] --> B["smaller: [2, 4]"]
+  A --> C["pivot 6 is in place"]
+  A --> D["larger: [7, 9]"]
+  B --> E["sort recursively"]
+  D --> F["sort recursively"]

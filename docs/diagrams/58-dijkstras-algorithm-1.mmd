@@ -1,0 +1,10 @@
+flowchart TD
+  S[dist of source = 0, push to heap] --> P{heap empty?}
+  P -->|no| A[pop node with smallest distance]
+  A --> OLD{distance is stale?}
+  OLD -->|yes| P
+  OLD -->|no| R[for each neighbour: new = dist + weight]
+  R --> U{new < best known?}
+  U -->|yes| PU[update, push to heap] --> P
+  U -->|no| P
+  P -->|yes| D[done]

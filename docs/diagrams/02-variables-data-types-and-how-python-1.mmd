@@ -1,0 +1,4 @@
+flowchart TD
+  V[Value] --> I{Can it change in place?}
+  I -->|No| IM[Immutable: int, float, str, bool, tuple]
+  I -->|Yes| M[Mutable: list, dict, set]

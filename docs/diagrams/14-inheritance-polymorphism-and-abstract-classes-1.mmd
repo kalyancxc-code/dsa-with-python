@@ -1,0 +1,9 @@
+classDiagram
+  class Shape {
+    <<abstract>>
+    +area()
+  }
+  Shape <|-- Circle
+  Shape <|-- Rectangle
+  class Circle { +radius }
+  class Rectangle { +w +h }

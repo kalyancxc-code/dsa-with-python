@@ -1,0 +1,12 @@
+flowchart TD
+  S[Read the problem] --> Q1{Sorted input or pairs?}
+  Q1 -->|yes| TP[Two pointers / binary search]
+  Q1 -->|no| Q2{Contiguous subarray?}
+  Q2 -->|yes| SW[Sliding window / prefix sums]
+  Q2 -->|no| Q3{Need fast lookup or counts?}
+  Q3 -->|yes| HM[Hash map / set]
+  Q3 -->|no| Q4{Try all choices?}
+  Q4 -->|yes| BT[Backtracking, then DP if overlap]
+  Q4 -->|no| Q5{Graph or tree shape?}
+  Q5 -->|yes| GR[DFS / BFS]
+  Q5 -->|no| GD[Greedy or heap]

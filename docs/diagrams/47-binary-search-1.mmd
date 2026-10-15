@@ -1,0 +1,8 @@
+flowchart TD
+  S[lo = 0, hi = n-1] --> W{lo <= hi?}
+  W -->|no| NF[not found: return -1]
+  W -->|yes| M["mid = lo + (hi - lo) // 2"]
+  M --> C{nums mid vs target}
+  C -->|equal| F[return mid]
+  C -->|smaller| L[lo = mid + 1] --> W
+  C -->|bigger| R[hi = mid - 1] --> W

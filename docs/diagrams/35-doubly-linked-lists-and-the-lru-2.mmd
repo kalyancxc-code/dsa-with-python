@@ -1,0 +1,7 @@
+flowchart TD
+  G[get key] --> Q{in dict?}
+  Q -->|no| M[return -1]
+  Q -->|yes| MV[move node to front] --> R[return value]
+  P[put key] --> F{cache full?}
+  F -->|yes| E[evict last node] --> I[insert at front]
+  F -->|no| I

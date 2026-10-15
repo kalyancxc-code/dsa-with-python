@@ -1,0 +1,6 @@
+flowchart TD
+  X[new number] --> Q{heap size < k?}
+  Q -->|yes| P[push]
+  Q -->|no| C{x > heap top?}
+  C -->|yes| R[pop smallest, push x]
+  C -->|no| I[ignore x]

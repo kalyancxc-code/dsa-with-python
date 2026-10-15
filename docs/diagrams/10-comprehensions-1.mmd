@@ -1,0 +1,5 @@
+flowchart LR
+  A[iterable] --> B{if condition}
+  B -->|pass| C[expression]
+  B -->|fail| X[dropped]
+  C --> D[new list / set / dict]

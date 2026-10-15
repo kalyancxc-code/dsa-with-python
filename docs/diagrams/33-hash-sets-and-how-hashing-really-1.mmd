@@ -1,0 +1,4 @@
+flowchart LR
+  K1["key 'cat'"] --> H1["hash % 4 = 1"] --> B1["bucket 1: cat"]
+  K2["key 'dog'"] --> H2["hash % 4 = 2"] --> B2["bucket 2: dog"]
+  K3["key 'cow'"] --> H3["hash % 4 = 1"] --> B1b["bucket 1: cat -> cow (collision, chained)"]

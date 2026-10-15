@@ -1,0 +1,4 @@
+flowchart TD
+  C[call f of n] --> Q{n in cache?}
+  Q -->|yes| R[return saved answer]
+  Q -->|no| W[compute] --> S[save in cache] --> R

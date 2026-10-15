@@ -1,0 +1,4 @@
+flowchart TD
+  C{A i-1 equals B j-1?}
+  C -->|yes| M["dp i j = dp i-1 j-1 + 1 (diagonal)"]
+  C -->|no| X["dp i j = max(dp i-1 j, dp i j-1) (up or left)"]

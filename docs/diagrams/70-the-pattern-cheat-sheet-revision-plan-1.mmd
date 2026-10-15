@@ -1,0 +1,18 @@
+flowchart TD
+  P[New problem] --> A{Array or string?}
+  A -->|sorted, pairs| TP[Two pointers]
+  A -->|contiguous best| SW[Sliding window]
+  A -->|range sums| PS[Prefix sums]
+  A -->|lookup, count| HM[Hash map or set]
+  P --> B{Linked list?}
+  B --> LL[Slow-fast, reverse, dummy node]
+  P --> C{Matching or next greater?}
+  C --> ST[Stack / monotonic stack]
+  P --> D{Tree?}
+  D --> TR[DFS recursion, BFS levels]
+  P --> E{Graph?}
+  E --> GR[BFS shortest, DFS components, topo, union-find, Dijkstra]
+  P --> F{Choices explode?}
+  F --> BT[Backtracking then DP]
+  P --> G{Optimise with overlap?}
+  G --> DP[Dynamic programming]

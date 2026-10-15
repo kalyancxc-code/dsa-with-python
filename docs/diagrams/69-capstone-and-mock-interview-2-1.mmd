@@ -1,0 +1,8 @@
+flowchart LR
+  U[User types place] --> T[Trie: suggestions]
+  U --> Q[Route request A to B]
+  Q --> UF{Union-Find: connected?}
+  UF -->|no| X[Say no route]
+  UF -->|yes| C{LRU cache hit?}
+  C -->|yes| R[Return saved answer]
+  C -->|no| D[Dijkstra on graph] --> S[Save in cache] --> R
